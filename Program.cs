@@ -18,6 +18,12 @@ namespace VisioArchitectureGenerator
             // Parse command line arguments
             var options = ParseArguments(args);
             
+            // If no arguments provided and not non-interactive, prompt for basic info
+            if (args.Length == 0 && !options.NonInteractive)
+            {
+                options = PromptForBasicInfo();
+            }
+            
             // Load or create configuration
             var configService = new ConfigurationService();
             var config = configService.LoadOrCreateConfiguration();
@@ -257,6 +263,75 @@ namespace VisioArchitectureGenerator
             Console.WriteLine("  Edit architecture-config.json for detailed customization");
             Console.WriteLine("  Run without arguments to create a sample configuration");
         }
+
+        private static CommandLineOptions PromptForBasicInfo()
+        {
+            var options = new CommandLineOptions();
+            
+            Console.WriteLine("🚀 Interactive Mode - Let's customize your architecture diagram!");
+            Console.WriteLine("(Press Enter to use defaults or provide your own values)");
+            Console.WriteLine();
+            
+            Console.Write("Project Name (default: My Project): ");
+            var projectName = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(projectName))
+                options.ProjectName = projectName;
+            
+            Console.Write("Company Name (default: My Company): ");
+            var companyName = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(companyName))
+                options.Company = companyName;
+            
+            Console.Write("Author Name (default: Architecture Team): ");
+            var authorName = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(authorName))
+                options.Author = authorName;
+            
+            Console.Write("Version (default: 1.0): ");
+            var version = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(version))
+                options.Version = version;
+            
+            Console.WriteLine();
+            Console.WriteLine("Would you like to use a template? Available templates:");
+            Console.WriteLine("  1. ecommerce  - E-commerce platform");
+            Console.WriteLine("  2. enterprise - Enterprise application");
+            Console.WriteLine("  3. saas       - SaaS application");
+            Console.WriteLine("  4. startup    - Startup MVP");
+            Console.WriteLine("  (press Enter to skip template)");
+            Console.Write("Choose template (1-4 or name): ");
+            var templateChoice = Console.ReadLine();
+            
+            if (!string.IsNullOrWhiteSpace(templateChoice))
+            {
+                switch (templateChoice.ToLower())
+                {
+                    case "1":
+                    case "ecommerce":
+                        options.Template = "ecommerce";
+                        break;
+                    case "2":
+                    case "enterprise":
+                        options.Template = "enterprise";
+                        break;
+                    case "3":
+                    case "saas":
+                        options.Template = "saas";
+                        break;
+                    case "4":
+                    case "startup":
+                        options.Template = "startup";
+                        break;
+                    default:
+                        Console.WriteLine($"⚠️ Unknown template '{templateChoice}', skipping...");
+                        break;
+                }
+            }
+            
+            Console.WriteLine();
+            return options;
+        }
+
     }
 
     public class CommandLineOptions

@@ -213,7 +213,7 @@ namespace VisioArchitectureGenerator.Generators
                                     fill=""#0078D4""/>");
             
             // Page title text
-            svgContent.AppendLine($@"<text x=""{PageWidth / 2}"" y=""{yOffset + 55}"" text-anchor=""middle"" class=""page-title"">{pageTitle}</text>");
+            svgContent.AppendLine($@"<text x=""{PageWidth / 2}"" y=""{yOffset + 55}"" text-anchor=""middle"" class=""page-title"">{EscapeXml(pageTitle)}</text>");
         }
 
         private void CreateHeader(int yOffset, string title, string subtitle)
@@ -221,12 +221,12 @@ namespace VisioArchitectureGenerator.Generators
             // Title section
             svgContent.AppendLine($@"<rect x=""50"" y=""{yOffset + 90}"" width=""800"" height=""40"" 
                                     fill=""#0078D4""/>");
-            svgContent.AppendLine($@"<text x=""450"" y=""{yOffset + 115}"" text-anchor=""middle"" class=""section-title"">{title}</text>");
+            svgContent.AppendLine($@"<text x=""450"" y=""{yOffset + 115}"" text-anchor=""middle"" class=""section-title"">{EscapeXml(title)}</text>");
             
             // Subtitle section
             svgContent.AppendLine($@"<rect x=""850"" y=""{yOffset + 90}"" width=""300"" height=""40"" 
                                     fill=""#f8f9fa"" stroke=""#6b7280""/>");
-            svgContent.AppendLine($@"<text x=""1000"" y=""{yOffset + 115}"" text-anchor=""middle"" class=""content-text"">{subtitle}</text>");
+            svgContent.AppendLine($@"<text x=""1000"" y=""{yOffset + 115}"" text-anchor=""middle"" class=""content-text"">{EscapeXml(subtitle)}</text>");
         }
 
         private void CreateBusinessContextQuadrant(int x, int y)
@@ -305,7 +305,7 @@ namespace VisioArchitectureGenerator.Generators
             
             // Header
             svgContent.AppendLine($@"<rect x=""{x}"" y=""{y}"" width=""{width}"" height=""40"" fill=""#0078D4""/>");
-            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 25}"" text-anchor=""middle"" class=""content-title"">{persona.Name}</text>");
+            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 25}"" text-anchor=""middle"" class=""content-title"">{EscapeXml(persona.Name)}</text>");
             
             // Content sections
             int sectionHeight = (height - 40) / 4;
@@ -494,7 +494,7 @@ namespace VisioArchitectureGenerator.Generators
             
             // Title bar
             svgContent.AppendLine($@"<rect x=""{x}"" y=""{y}"" width=""{width}"" height=""40"" fill=""{titleColor}""/>");
-            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 25}"" text-anchor=""middle"" class=""section-title"">{title}</text>");
+            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 25}"" text-anchor=""middle"" class=""section-title"">{EscapeXml(title)}</text>");
         }
 
         private void CreateContentBox(int x, int y, int width, int height, string title, string content, string titleColor)
@@ -506,7 +506,7 @@ namespace VisioArchitectureGenerator.Generators
             // Title bar
             int titleHeight = 25;
             svgContent.AppendLine($@"<rect x=""{x}"" y=""{y}"" width=""{width}"" height=""{titleHeight}"" fill=""{titleColor}""/>");
-            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 17}"" text-anchor=""middle"" class=""content-title"">{title}</text>");
+            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + 17}"" text-anchor=""middle"" class=""content-title"">{EscapeXml(title)}</text>");
             
             // Content
             CreateTextBlock(x + 5, y + titleHeight + 5, width - 10, height - titleHeight - 10, content);
@@ -516,7 +516,7 @@ namespace VisioArchitectureGenerator.Generators
         {
             svgContent.AppendLine($@"<rect x=""{x}"" y=""{y}"" width=""{width}"" height=""{height}"" 
                                     fill=""{color}"" stroke=""#6b7280"" stroke-width=""1""/>");
-            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + height/2 + 5}"" text-anchor=""middle"" class=""content-text"">{text}</text>");
+            svgContent.AppendLine($@"<text x=""{x + width/2}"" y=""{y + height/2 + 5}"" text-anchor=""middle"" class=""content-text"">{EscapeXml(text)}</text>");
         }
 
         private void CreateLayerBox(int x, int y, int width, int height, string layerName, string technologies, string color)
@@ -527,10 +527,10 @@ namespace VisioArchitectureGenerator.Generators
             
             // Layer name (left 25%)
             int nameWidth = width / 4;
-            svgContent.AppendLine($@"<text x=""{x + nameWidth/2}"" y=""{y + height/2 + 5}"" text-anchor=""middle"" class=""content-title"">{layerName}</text>");
+            svgContent.AppendLine($@"<text x=""{x + nameWidth/2}"" y=""{y + height/2 + 5}"" text-anchor=""middle"" class=""content-title"">{EscapeXml(layerName)}</text>");
             
             // Technologies (right 75%)
-            svgContent.AppendLine($@"<text x=""{x + nameWidth + 10}"" y=""{y + height/2 + 5}"" class=""content-title"">{technologies}</text>");
+            svgContent.AppendLine($@"<text x=""{x + nameWidth + 10}"" y=""{y + height/2 + 5}"" class=""content-title"">{EscapeXml(technologies)}</text>");
         }
 
         private void CreateTextBlock(int x, int y, int width, int height, string text)
@@ -567,7 +567,7 @@ namespace VisioArchitectureGenerator.Generators
             svgContent.AppendLine($@"<rect x=""50"" y=""{yOffset}"" width=""{PageWidth - 100}"" height=""30"" 
                                     fill=""#f8f9fa"" stroke=""#6b7280""/>");
             svgContent.AppendLine($@"<text x=""{PageWidth/2}"" y=""{yOffset + 20}"" text-anchor=""middle"" class=""footer-text"">
-                                    Generated: {DateTime.Now:yyyy-MM-dd HH:mm} | {config!.Project.Company} | Version: {config.Project.Version} | Author: {config.Project.Author}</text>");
+                                    Generated: {DateTime.Now:yyyy-MM-dd HH:mm} | {EscapeXml(config!.Project.Company)} | Version: {EscapeXml(config.Project.Version)} | Author: {EscapeXml(config.Project.Author)}</text>");
         }
 
         private List<string> WrapText(string text, int maxLength)
