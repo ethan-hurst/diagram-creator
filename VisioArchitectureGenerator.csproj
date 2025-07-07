@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -26,6 +26,20 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <!-- Exclude Visio-related files on non-Windows platforms -->
+  <ItemGroup Condition="!$([MSBuild]::IsOSPlatform('Windows'))">
+    <Compile Remove="Generators\VisioGenerator.cs" />
+    <Compile Remove="Generators\Components\FooterGenerator.cs" />
+    <Compile Remove="Generators\Components\HeaderGenerator.cs" />
+    <Compile Remove="Generators\Components\ShapeHelpers.cs" />
+    <Compile Remove="Generators\PageGenerators\ChannelsPageGenerator.cs" />
+    <Compile Remove="Generators\PageGenerators\DataPageGenerator.cs" />
+    <Compile Remove="Generators\PageGenerators\ImplementationPageGenerator.cs" />
+    <Compile Remove="Generators\PageGenerators\OverviewPageGenerator.cs" />
+    <Compile Remove="Generators\PageGenerators\PersonaPageGenerator.cs" />
+    <Compile Remove="Generators\PageGenerators\TechnologyPageGenerator.cs" />
   </ItemGroup>
 
 </Project> 
