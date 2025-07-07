@@ -1,0 +1,6 @@
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.csproj.AssemblyReference.cache
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.AssemblyInfoInputs.cache
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.AssemblyInfo.cs
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.csproj.CoreCompileInputs.cache
+/workspaces/diagram-creator/obj/Debug/net6.0/VisioArchitectureGenerator.sourcelink.json
