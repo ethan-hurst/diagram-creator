@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="5400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <style>
+        .page-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: white; }
+        .section-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: white; }
+        .content-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: white; }
+        .content-text { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+        .small-text { font-family: Arial, sans-serif; font-size: 10px; fill: #333; }
+        .footer-text { font-family: Arial, sans-serif; font-size: 9px; fill: #666; }
+    </style>
+</defs>
+<rect x="20" y="20" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="20" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="55" text-anchor="middle" class="page-title">1. Solution Overview</text>
+<rect x="50" y="90" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="115" text-anchor="middle" class="section-title">Test Solution</text>
+<rect x="850" y="90" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="115" text-anchor="middle" class="content-text">Version 2.0</text>
+<rect x="50" y="120" width="550" height="250" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="50" y="120" width="550" height="40" fill="#0078D4"/>
+<text x="325" y="145" text-anchor="middle" class="section-title">Business Context</text>
+<rect x="70" y="180" width="250" height="80" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="70" y="180" width="250" height="25" fill="#10B981"/>
+<text x="195" y="197" text-anchor="middle" class="content-title">Executive Summary</text>
+<text x="75" y="225" class="content-text">Modern, scalable customer</text>
+<text x="75" y="239" class="content-text">portal
+Mobile-first responsive</text>
+<text x="75" y="253" class="content-text">design
+Integration with</text>
+<rect x="340" y="180" width="240" height="80" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="340" y="180" width="240" height="25" fill="#10B981"/>
+<text x="460" y="197" text-anchor="middle" class="content-title">Business Drivers</text>
+<text x="345" y="225" class="content-text">Reduce case resolution time</text>
+<text x="345" y="239" class="content-text">by 40%
+Increase customer</text>
+<text x="345" y="253" class="content-text">satisfaction to 95%+
+Enable</text>
+<rect x="70" y="280" width="510" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="70" y="280" width="510" height="25" fill="#10B981"/>
+<text x="325" y="297" text-anchor="middle" class="content-title">Success Criteria</text>
+<text x="75" y="325" class="content-text">99.9% system uptime
+&lt; 2 second page load times
+Support 50,000</text>
+<text x="75" y="339" class="content-text">concurrent users
+Mobile usage &gt; 60% of total traffic</text>
+<rect x="650" y="120" width="500" height="250" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="650" y="120" width="500" height="40" fill="#0078D4"/>
+<text x="900" y="145" text-anchor="middle" class="section-title">Solution Scope</text>
+<rect x="670" y="180" width="460" height="80" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="670" y="180" width="460" height="25" fill="#10B981"/>
+<text x="900" y="197" text-anchor="middle" class="content-title">In Scope</text>
+<text x="675" y="225" class="content-text">Customer registration and profile management
+Account</text>
+<text x="675" y="239" class="content-text">management and billing inquiry
+Service request</text>
+<text x="675" y="253" class="content-text">submission and tracking
+Document management and</text>
+<rect x="670" y="280" width="460" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="670" y="280" width="460" height="25" fill="#EF4444"/>
+<text x="900" y="297" text-anchor="middle" class="content-title">Out of Scope</text>
+<text x="675" y="325" class="content-text">Legacy system migration
+Payment processing</text>
+<text x="675" y="339" class="content-text">integration
+Call center systems
+Marketing automation</text>
+<rect x="50" y="400" width="550" height="200" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="50" y="400" width="550" height="40" fill="#0078D4"/>
+<text x="325" y="425" text-anchor="middle" class="section-title">Business Processes</text>
+<rect x="650" y="400" width="500" height="200" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="650" y="400" width="500" height="40" fill="#0078D4"/>
+<text x="900" y="425" text-anchor="middle" class="section-title">Stakeholder Matrix</text>
+<rect x="670" y="460" width="220" height="60" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="670" y="460" width="220" height="25" fill="#10B981"/>
+<text x="780" y="477" text-anchor="middle" class="content-title">Primary</text>
+<text x="675" y="505" class="content-text">• Customers (45,000)
+•</text>
+<rect x="910" y="460" width="220" height="60" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="910" y="460" width="220" height="25" fill="#F59E0B"/>
+<text x="1020" y="477" text-anchor="middle" class="content-title">Secondary</text>
+<text x="915" y="505" class="content-text">• Account Managers (25)
+•</text>
+<rect x="670" y="540" width="460" height="40" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="670" y="540" width="460" height="25" fill="#0078D4"/>
+<text x="900" y="557" text-anchor="middle" class="content-title">Summary</text>
+<rect x="50" y="810" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="830" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+<rect x="20" y="920" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="920" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="955" text-anchor="middle" class="page-title">2. Users &amp; Personas</text>
+<rect x="50" y="990" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="1015" text-anchor="middle" class="section-title">Users &amp; Personas</text>
+<rect x="850" y="990" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="1015" text-anchor="middle" class="content-text">Page 2 of 6</text>
+<rect x="50" y="1050" width="350" height="200" 
+                                    fill="white" stroke="#6b7280" stroke-width="2"/>
+<rect x="50" y="1050" width="350" height="40" fill="#0078D4"/>
+<text x="225" y="1075" text-anchor="middle" class="content-title">Sarah Chen</text>
+<text x="60" y="1105" class="small-text" font-weight="bold">Role:</text>
+<text x="60" y="1120" class="small-text">Business Customer - Operations Manager</text>
+<text x="60" y="1132" class="small-text">at Tech Startup</text>
+<text x="60" y="1137" class="small-text" font-weight="bold">Goals:</text>
+<text x="60" y="1152" class="small-text">Quickly access account information,</text>
+<text x="60" y="1164" class="small-text">Submit and track service requests</text>
+<text x="60" y="1169" class="small-text" font-weight="bold">D365 Access:</text>
+<text x="60" y="1201" class="small-text" font-weight="bold">Power Platform:</text>
+<text x="60" y="1233" class="small-text" font-weight="bold">Security Roles:</text>
+<rect x="450" y="1050" width="350" height="200" 
+                                    fill="white" stroke="#6b7280" stroke-width="2"/>
+<rect x="450" y="1050" width="350" height="40" fill="#0078D4"/>
+<text x="625" y="1075" text-anchor="middle" class="content-title">Mike Rodriguez</text>
+<text x="460" y="1105" class="small-text" font-weight="bold">Role:</text>
+<text x="460" y="1120" class="small-text">Individual Consumer - Personal Account</text>
+<text x="460" y="1132" class="small-text">Holder</text>
+<text x="460" y="1137" class="small-text" font-weight="bold">Goals:</text>
+<text x="460" y="1152" class="small-text">Pay bills and view statements, Update</text>
+<text x="460" y="1164" class="small-text">personal information</text>
+<text x="460" y="1169" class="small-text" font-weight="bold">D365 Access:</text>
+<text x="460" y="1201" class="small-text" font-weight="bold">Power Platform:</text>
+<text x="460" y="1233" class="small-text" font-weight="bold">Security Roles:</text>
+<rect x="50" y="1300" width="1100" height="120" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="50" y="1300" width="1100" height="40" fill="#0078D4"/>
+<text x="600" y="1325" text-anchor="middle" class="section-title">User Base Summary</text>
+<text x="70" y="1375" class="content-text">Total Users: 45,183 | Primary: 45,150 (99.9%)
+
+Key Groups: Customers: 45,000 | Customer Service Reps: 150 | Account Managers: 25 |</text>
+<text x="70" y="1389" class="content-text">System Administrators: 8</text>
+<rect x="50" y="1710" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="1730" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+<rect x="20" y="1820" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="1820" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="1855" text-anchor="middle" class="page-title">3. Power Platform Components</text>
+<rect x="50" y="1890" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="1915" text-anchor="middle" class="section-title">Power Platform Components</text>
+<rect x="850" y="1890" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="1915" text-anchor="middle" class="content-text">Page 3 of 6</text>
+<rect x="50" y="1950" width="550" height="200" 
+                                    fill="#f8f9fa" stroke="#742774" stroke-width="2"/>
+<rect x="50" y="1950" width="550" height="40" fill="#742774"/>
+<text x="325" y="1975" text-anchor="middle" class="section-title">Power Apps</text>
+<rect x="650" y="1950" width="500" height="200" 
+                                    fill="#f8f9fa" stroke="#0066FF" stroke-width="2"/>
+<rect x="650" y="1950" width="500" height="40" fill="#0066FF"/>
+<text x="900" y="1975" text-anchor="middle" class="section-title">Power Automate</text>
+<rect x="50" y="2200" width="550" height="150" 
+                                    fill="#f8f9fa" stroke="#F2C811" stroke-width="2"/>
+<rect x="50" y="2200" width="550" height="40" fill="#F2C811"/>
+<text x="325" y="2225" text-anchor="middle" class="section-title">Power BI Reports</text>
+<rect x="650" y="2200" width="500" height="150" 
+                                    fill="#f8f9fa" stroke="#00BCF2" stroke-width="2"/>
+<rect x="650" y="2200" width="500" height="40" fill="#00BCF2"/>
+<text x="900" y="2225" text-anchor="middle" class="section-title">Connectors</text>
+<rect x="670" y="2260" width="220" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="670" y="2260" width="220" height="25" fill="#00BCF2"/>
+<text x="780" y="2277" text-anchor="middle" class="content-title">Standard</text>
+<rect x="910" y="2260" width="220" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="910" y="2260" width="220" height="25" fill="#FF8C00"/>
+<text x="1020" y="2277" text-anchor="middle" class="content-title">Premium</text>
+<rect x="50" y="2610" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="2630" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+<rect x="20" y="2720" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="2720" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="2755" text-anchor="middle" class="page-title">4. Dynamics 365 &amp; Dataverse</text>
+<rect x="50" y="2790" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="2815" text-anchor="middle" class="section-title">Dynamics 365 &amp; Dataverse</text>
+<rect x="850" y="2790" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="2815" text-anchor="middle" class="content-text">Page 4 of 6</text>
+<rect x="50" y="2850" width="1100" height="200" 
+                                    fill="#f8f9fa" stroke="#0078D4" stroke-width="2"/>
+<rect x="50" y="2850" width="1100" height="40" fill="#0078D4"/>
+<text x="600" y="2875" text-anchor="middle" class="section-title">Dynamics 365 Applications</text>
+<rect x="50" y="3100" width="1100" height="200" 
+                                    fill="#f8f9fa" stroke="#6264A7" stroke-width="2"/>
+<rect x="50" y="3100" width="1100" height="40" fill="#6264A7"/>
+<text x="600" y="3125" text-anchor="middle" class="section-title">Dataverse Configuration</text>
+<rect x="70" y="3160" width="350" height="120" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="70" y="3160" width="350" height="25" fill="#6264A7"/>
+<text x="245" y="3177" text-anchor="middle" class="content-title">Entities</text>
+<rect x="440" y="3160" width="350" height="120" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="440" y="3160" width="350" height="25" fill="#6264A7"/>
+<text x="615" y="3177" text-anchor="middle" class="content-title">Security Roles</text>
+<rect x="810" y="3160" width="320" height="120" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="810" y="3160" width="320" height="25" fill="#6264A7"/>
+<text x="970" y="3177" text-anchor="middle" class="content-title">Business Units</text>
+<rect x="50" y="3510" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="3530" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+<rect x="20" y="3620" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="3620" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="3655" text-anchor="middle" class="page-title">5. Integrations &amp; Security</text>
+<rect x="50" y="3690" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="3715" text-anchor="middle" class="section-title">Integrations &amp; Security</text>
+<rect x="850" y="3690" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="3715" text-anchor="middle" class="content-text">Page 5 of 6</text>
+<rect x="50" y="3750" width="1100" height="200" 
+                                    fill="#f8f9fa" stroke="#FF6900" stroke-width="2"/>
+<rect x="50" y="3750" width="1100" height="40" fill="#FF6900"/>
+<text x="600" y="3775" text-anchor="middle" class="section-title">System Integrations</text>
+<rect x="50" y="4000" width="1100" height="150" 
+                                    fill="#f8f9fa" stroke="#D13438" stroke-width="2"/>
+<rect x="50" y="4000" width="1100" height="40" fill="#D13438"/>
+<text x="600" y="4025" text-anchor="middle" class="section-title">Security Model</text>
+<rect x="70" y="4060" width="530" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="70" y="4060" width="530" height="25" fill="#D13438"/>
+<text x="335" y="4077" text-anchor="middle" class="content-title">Security Roles</text>
+<rect x="620" y="4060" width="510" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="620" y="4060" width="510" height="25" fill="#D13438"/>
+<text x="875" y="4077" text-anchor="middle" class="content-title">Security Settings</text>
+<text x="625" y="4105" class="content-text">MFA Required: True
+Auditing: True
+Session Timeout: 480 min</text>
+<rect x="50" y="4410" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="4430" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+<rect x="20" y="4520" width="1160" height="810" 
+                                    fill="white" stroke="#ddd" stroke-width="2"/>
+<rect x="20" y="4520" width="1160" height="60" 
+                                    fill="#0078D4"/>
+<text x="600" y="4555" text-anchor="middle" class="page-title">6. Implementation Roadmap</text>
+<rect x="50" y="4590" width="800" height="40" 
+                                    fill="#0078D4"/>
+<text x="450" y="4615" text-anchor="middle" class="section-title">Implementation Roadmap</text>
+<rect x="850" y="4590" width="300" height="40" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="1000" y="4615" text-anchor="middle" class="content-text">Page 6 of 6</text>
+<rect x="50" y="4650" width="1100" height="200" 
+                                    fill="#f8f9fa" stroke="#107C10" stroke-width="2"/>
+<rect x="50" y="4650" width="1100" height="40" fill="#107C10"/>
+<text x="600" y="4675" text-anchor="middle" class="section-title">Environment Strategy</text>
+<rect x="50" y="4900" width="1100" height="200" 
+                                    fill="#f8f9fa" stroke="#8764B8" stroke-width="2"/>
+<rect x="50" y="4900" width="1100" height="40" fill="#8764B8"/>
+<text x="600" y="4925" text-anchor="middle" class="section-title">Implementation Timeline</text>
+<rect x="70" y="4960" width="520" height="40" 
+                                    fill="#6366F1" stroke="#6b7280" stroke-width="1"/>
+<text x="330" y="4985" text-anchor="middle" class="content-title">Phase 1: Foundation &amp; Core Services</text>
+<rect x="70" y="5010" width="520" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="70" y="5010" width="520" height="25" fill="white"/>
+<text x="330" y="5027" text-anchor="middle" class="content-title">Aug 2025 - Nov 2025</text>
+<text x="75" y="5055" class="content-text">Basic infrastructure, authentication, and core APIs
+Status:</text>
+<text x="75" y="5069" class="content-text">Planning</text>
+<rect x="600" y="4960" width="520" height="40" 
+                                    fill="#10B981" stroke="#6b7280" stroke-width="1"/>
+<text x="860" y="4985" text-anchor="middle" class="content-title">Phase 2: Enhanced Portal &amp; Mobile</text>
+<rect x="600" y="5010" width="520" height="70" 
+                                    fill="white" stroke="#6b7280" stroke-width="1"/>
+<rect x="600" y="5010" width="520" height="25" fill="white"/>
+<text x="860" y="5027" text-anchor="middle" class="content-title">Nov 2025 - Feb 2026</text>
+<text x="605" y="5055" class="content-text">Full-featured web portal and mobile applications
+Status:</text>
+<text x="605" y="5069" class="content-text">Planned</text>
+<rect x="50" y="5310" width="1100" height="30" 
+                                    fill="#f8f9fa" stroke="#6b7280"/>
+<text x="600" y="5330" text-anchor="middle" class="footer-text">
+                                    Generated: 2025-07-07 04:22 | Test Corp | Version: 2.0 | Author: Solution Architecture Team</text>
+</svg>

@@ -9,7 +9,7 @@ namespace VisioArchitectureGenerator.Services
     {
         private const string ConfigFileName = "architecture-config.json";
         
-        public ArchitectureConfiguration LoadOrCreateConfiguration()
+        public PowerPlatformConfiguration LoadOrCreateConfiguration()
         {
             if (File.Exists(ConfigFileName))
             {
@@ -17,7 +17,7 @@ namespace VisioArchitectureGenerator.Services
                 try
                 {
                     string json = File.ReadAllText(ConfigFileName);
-                    var config = JsonSerializer.Deserialize<ArchitectureConfiguration>(json, GetJsonOptions());
+                    var config = JsonSerializer.Deserialize<PowerPlatformConfiguration>(json, GetJsonOptions());
                     Console.WriteLine("✅ Configuration loaded successfully!");
                     return config ?? CreateSampleConfiguration();
                 }
@@ -34,7 +34,7 @@ namespace VisioArchitectureGenerator.Services
             try
             {
                 SaveConfiguration(sampleConfig);
-                Console.WriteLine("✅ Sample configuration created! Edit this file to customize your architecture.");
+                Console.WriteLine("✅ Sample configuration created! Edit this file to customize your Dynamics 365/Power Platform solution.");
             }
             catch (Exception ex)
             {
@@ -44,13 +44,13 @@ namespace VisioArchitectureGenerator.Services
             return sampleConfig;
         }
 
-        public void SaveConfiguration(ArchitectureConfiguration config)
+        public void SaveConfiguration(PowerPlatformConfiguration config)
         {
             string json = JsonSerializer.Serialize(config, GetJsonOptions());
             File.WriteAllText(ConfigFileName, json);
         }
 
-        private ArchitectureConfiguration CreateSampleConfiguration()
+        private PowerPlatformConfiguration CreateSampleConfiguration()
         {
             var sampleDataService = new SampleDataService();
             return sampleDataService.CreateSampleConfiguration();

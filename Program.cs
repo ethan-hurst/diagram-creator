@@ -127,7 +127,7 @@ namespace VisioArchitectureGenerator
             return options;
         }
 
-        private static void ApplyCommandLineOverrides(ArchitectureConfiguration config, CommandLineOptions options)
+        private static void ApplyCommandLineOverrides(PowerPlatformConfiguration config, CommandLineOptions options)
         {
             if (!string.IsNullOrEmpty(options.ProjectName))
             {
@@ -160,79 +160,79 @@ namespace VisioArchitectureGenerator
             }
         }
 
-        private static void ApplyTemplate(ArchitectureConfiguration config, string template)
+        private static void ApplyTemplate(PowerPlatformConfiguration config, string template)
         {
             Console.WriteLine($"📋 Applying template: {template}");
             
             switch (template.ToLower())
             {
-                case "ecommerce":
-                    ApplyEcommerceTemplate(config);
+                case "customerservice":
+                    ApplyCustomerServiceTemplate(config);
                     break;
-                case "enterprise":
-                    ApplyEnterpriseTemplate(config);
+                case "sales":
+                    ApplySalesTemplate(config);
                     break;
-                case "saas":
-                    ApplySaasTemplate(config);
+                case "fieldservice":
+                    ApplyFieldServiceTemplate(config);
                     break;
-                case "startup":
-                    ApplyStartupTemplate(config);
+                case "finance":
+                    ApplyFinanceTemplate(config);
                     break;
                 default:
-                    Console.WriteLine($"⚠️ Unknown template: {template}. Available templates: ecommerce, enterprise, saas, startup");
+                    Console.WriteLine($"⚠️ Unknown template: {template}. Available templates: customerservice, sales, fieldservice, finance");
                     break;
             }
         }
 
-        private static void ApplyEcommerceTemplate(ArchitectureConfiguration config)
+        private static void ApplyCustomerServiceTemplate(PowerPlatformConfiguration config)
         {
-            config.Project.Description = "E-commerce platform with customer portal, payment processing, and inventory management";
+            config.Project.Description = "Customer service solution with Dynamics 365 Customer Service and Power Platform";
             config.Business.BusinessDrivers.Clear();
             config.Business.BusinessDrivers.AddRange(new[]
             {
-                "Increase online sales conversion",
-                "Reduce cart abandonment",
-                "Improve customer experience",
-                "Scale for peak shopping periods"
+                "Reduce case resolution time by 40%",
+                "Increase customer satisfaction to 95%+",
+                "Enable 24/7 self-service capabilities",
+                "Improve agent productivity through automation"
             });
         }
 
-        private static void ApplyEnterpriseTemplate(ArchitectureConfiguration config)
+        private static void ApplySalesTemplate(PowerPlatformConfiguration config)
         {
-            config.Project.Description = "Enterprise application with role-based access, compliance, and integration";
+            config.Project.Description = "Sales automation solution with Dynamics 365 Sales and Power Platform";
             config.Business.BusinessDrivers.Clear();
             config.Business.BusinessDrivers.AddRange(new[]
             {
-                "Improve operational efficiency",
-                "Ensure compliance and security",
-                "Enable scalable growth",
-                "Reduce IT maintenance costs"
+                "Increase sales productivity by 35%",
+                "Improve lead conversion rates",
+                "Enable mobile sales capabilities",
+                "Provide real-time sales insights"
             });
         }
 
-        private static void ApplySaasTemplate(ArchitectureConfiguration config)
+        private static void ApplyFieldServiceTemplate(PowerPlatformConfiguration config)
         {
-            config.Project.Description = "Multi-tenant SaaS application with subscription management and analytics";
+            config.Project.Description = "Field service management with Dynamics 365 Field Service and Power Platform";
             config.Business.BusinessDrivers.Clear();
             config.Business.BusinessDrivers.AddRange(new[]
             {
-                "Enable rapid customer onboarding",
-                "Provide scalable multi-tenant architecture",
-                "Implement usage-based pricing",
-                "Deliver comprehensive analytics"
+                "Optimize technician scheduling and routing",
+                "Improve first-time fix rates to 90%+",
+                "Enable mobile workforce capabilities",
+                "Reduce service delivery costs by 25%"
             });
         }
 
-        private static void ApplyStartupTemplate(ArchitectureConfiguration config)
+        private static void ApplyFinanceTemplate(PowerPlatformConfiguration config)
         {
-            config.Project.Description = "MVP application with focus on rapid development and validation";
+            config.Project.Description = "Finance and operations solution with Dynamics 365 Finance and Power Platform";
             config.Business.BusinessDrivers.Clear();
             config.Business.BusinessDrivers.AddRange(new[]
             {
-                "Validate product-market fit",
-                "Minimize time to market",
-                "Enable rapid iteration",
-                "Optimize for cost efficiency"
+                "Automate accounts payable processes",
+                "Improve financial reporting accuracy",
+                "Enable real-time financial insights",
+                "Reduce month-end close time by 50%"
             });
         }
 
@@ -250,13 +250,13 @@ namespace VisioArchitectureGenerator
             Console.WriteLine("  -v, --version <version>      Set the project version");
             Console.WriteLine("  -o, --output <path>          Set the output file path");
             Console.WriteLine("  -t, --template <template>    Apply a predefined template");
-            Console.WriteLine("                               (ecommerce, enterprise, saas, startup)");
+            Console.WriteLine("                               (customerservice, sales, fieldservice, finance)");
             Console.WriteLine("  -ni, --non-interactive       Run without user prompts");
             Console.WriteLine("  -h, --help                   Show this help message");
             Console.WriteLine();
             Console.WriteLine("Examples:");
-            Console.WriteLine("  dotnet run --project-name \"My App\" --company \"My Company\"");
-            Console.WriteLine("  dotnet run --template ecommerce --output ./my-diagram.svg");
+            Console.WriteLine("  dotnet run --project-name \"My Solution\" --company \"My Company\"");
+            Console.WriteLine("  dotnet run --template customerservice --output ./my-diagram.svg");
             Console.WriteLine("  dotnet run --non-interactive");
             Console.WriteLine();
             Console.WriteLine("Configuration:");
@@ -294,10 +294,10 @@ namespace VisioArchitectureGenerator
             
             Console.WriteLine();
             Console.WriteLine("Would you like to use a template? Available templates:");
-            Console.WriteLine("  1. ecommerce  - E-commerce platform");
-            Console.WriteLine("  2. enterprise - Enterprise application");
-            Console.WriteLine("  3. saas       - SaaS application");
-            Console.WriteLine("  4. startup    - Startup MVP");
+            Console.WriteLine("  1. customerservice - Customer Service with D365 Customer Service");
+            Console.WriteLine("  2. sales          - Sales automation with D365 Sales");
+            Console.WriteLine("  3. fieldservice   - Field Service management with D365 Field Service");
+            Console.WriteLine("  4. finance        - Finance operations with D365 Finance");
             Console.WriteLine("  (press Enter to skip template)");
             Console.Write("Choose template (1-4 or name): ");
             var templateChoice = Console.ReadLine();
@@ -307,20 +307,20 @@ namespace VisioArchitectureGenerator
                 switch (templateChoice.ToLower())
                 {
                     case "1":
-                    case "ecommerce":
-                        options.Template = "ecommerce";
+                    case "customerservice":
+                        options.Template = "customerservice";
                         break;
                     case "2":
-                    case "enterprise":
-                        options.Template = "enterprise";
+                    case "sales":
+                        options.Template = "sales";
                         break;
                     case "3":
-                    case "saas":
-                        options.Template = "saas";
+                    case "fieldservice":
+                        options.Template = "fieldservice";
                         break;
                     case "4":
-                    case "startup":
-                        options.Template = "startup";
+                    case "finance":
+                        options.Template = "finance";
                         break;
                     default:
                         Console.WriteLine($"⚠️ Unknown template '{templateChoice}', skipping...");

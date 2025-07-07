@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VisioArchitectureGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a2f3ef6bee09f5dbc528785fe63fc4b6b59957a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0ae01b4f886af5efde2d5982257d406fcec4a9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VisioArchitectureGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VisioArchitectureGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

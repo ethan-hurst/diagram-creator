@@ -6,278 +6,424 @@ namespace VisioArchitectureGenerator.Services
 {
     public class SampleDataService
     {
-        public ArchitectureConfiguration CreateSampleConfiguration()
+        public PowerPlatformConfiguration CreateSampleConfiguration()
         {
-            return new ArchitectureConfiguration
+            return new PowerPlatformConfiguration
             {
                 Project = new ProjectInfo
                 {
-                    Name = "Enterprise Customer Portal",
-                    Version = "2.0",
-                    Company = "Acme Corporation",
-                    Description = "Next-generation customer self-service portal with mobile-first design",
-                    Author = "Solution Architecture Team",
+                    Name = "Customer Service Power Platform Solution",
+                    Version = "1.0",
+                    Company = "Contoso Corporation",
+                    Description = "Comprehensive customer service solution using Dynamics 365 Customer Service and Power Platform",
+                    Author = "Power Platform Architecture Team",
                     Status = "In Development"
                 },
                 Business = new BusinessContext
                 {
                     ExecutiveSummary = new List<string>
                     {
-                        "Modern, scalable customer portal",
-                        "Mobile-first responsive design",
-                        "Integration with existing CRM and billing systems",
-                        "Enhanced self-service capabilities"
+                        "Unified customer service platform using Dynamics 365 and Power Platform",
+                        "Automated case routing and resolution workflows",
+                        "Self-service customer portal with Power Apps",
+                        "Real-time dashboards and analytics with Power BI"
                     },
                     BusinessDrivers = new List<string>
                     {
-                        "Reduce customer service costs by 30%",
-                        "Improve customer satisfaction scores",
-                        "Enable 24/7 self-service capabilities",
-                        "Support business growth and scalability"
+                        "Reduce average case resolution time by 40%",
+                        "Increase customer satisfaction scores to 95%+",
+                        "Enable agent productivity through automation",
+                        "Provide 360-degree customer view across all touchpoints"
                     },
                     SuccessCriteria = new List<string>
                     {
-                        "99.9% system uptime",
-                        "< 2 second page load times",
-                        "Support 50,000 concurrent users",
-                        "Mobile usage > 60% of total traffic"
+                        "Average case resolution time < 24 hours",
+                        "Customer satisfaction score > 4.5/5",
+                        "Agent productivity increase by 30%",
+                        "Self-service adoption rate > 70%"
                     },
                     Principles = new List<string>
                     {
-                        "Mobile-first design approach",
-                        "API-driven architecture",
-                        "Cloud-native deployment",
-                        "Security by design"
+                        "Customer-centric design",
+                        "Process automation first",
+                        "Data-driven decision making",
+                        "Scalable cloud architecture"
                     },
                     Scope = new SystemScope
                     {
                         InScope = new List<string>
                         {
-                            "Customer registration and profile management",
-                            "Account management and billing inquiry",
-                            "Service request submission and tracking",
-                            "Document management and downloads",
-                            "Mobile applications (iOS/Android)"
+                            "Dynamics 365 Customer Service implementation",
+                            "Power Apps customer portal",
+                            "Power Automate workflow automation",
+                            "Power BI reporting and analytics",
+                            "Knowledge base and self-service"
                         },
                         OutOfScope = new List<string>
                         {
-                            "Legacy system migration",
-                            "Payment processing integration",
-                            "Call center systems",
-                            "Marketing automation platform"
+                            "Dynamics 365 Sales module",
+                            "Third-party telephony integration",
+                            "Legacy CRM data migration",
+                            "Advanced AI capabilities"
                         }
                     },
                     Stakeholders = new List<Stakeholder>
                     {
-                        new Stakeholder { Name = "Customers", Type = "Primary", UserCount = 45000, Influence = "High" },
-                        new Stakeholder { Name = "Customer Service Reps", Type = "Primary", UserCount = 150, Influence = "High" },
-                        new Stakeholder { Name = "Account Managers", Type = "Secondary", UserCount = 25, Influence = "Medium" },
-                        new Stakeholder { Name = "System Administrators", Type = "Secondary", UserCount = 8, Influence = "Medium" }
+                        new Stakeholder { Name = "Customer Service Agents", Type = "Primary", UserCount = 120, Influence = "High" },
+                        new Stakeholder { Name = "Customer Service Managers", Type = "Primary", UserCount = 15, Influence = "High" },
+                        new Stakeholder { Name = "Customers", Type = "Primary", UserCount = 25000, Influence = "High" },
+                        new Stakeholder { Name = "IT Administrators", Type = "Secondary", UserCount = 8, Influence = "Medium" }
+                    },
+                    BusinessProcesses = new List<BusinessProcess>
+                    {
+                        new BusinessProcess
+                        {
+                            Name = "Case Management",
+                            Type = "Core",
+                            Description = "End-to-end customer case lifecycle management",
+                            Steps = new List<string> { "Case Creation", "Case Assignment", "Investigation", "Resolution", "Case Closure" },
+                            CurrentState = "Manual",
+                            FutureState = "Automated",
+                            AutomationOpportunities = new List<string> { "Automatic case routing", "SLA monitoring", "Escalation workflows" }
+                        },
+                        new BusinessProcess
+                        {
+                            Name = "Knowledge Management",
+                            Type = "Supporting",
+                            Description = "Creation and maintenance of knowledge articles",
+                            Steps = new List<string> { "Article Creation", "Review & Approval", "Publishing", "Usage Tracking", "Article Updates" },
+                            CurrentState = "Manual",
+                            FutureState = "Partially Automated",
+                            AutomationOpportunities = new List<string> { "Auto-suggest articles", "Usage analytics", "Content approval workflow" }
+                        }
                     }
                 },
                 Personas = new List<UserPersona>
                 {
                     new UserPersona
                     {
-                        Name = "Sarah Chen",
-                        Role = "Business Customer",
-                        Department = "Operations Manager at Tech Startup",
+                        Name = "Sarah Johnson",
+                        Role = "Customer Service Agent",
+                        Department = "Customer Support",
                         Background = new List<string>
                         {
-                            "5 years experience managing vendor relationships",
-                            "Manages multiple service accounts",
-                            "Prefers self-service options",
-                            "Technology-savvy early adopter"
+                            "3 years customer service experience",
+                            "Familiar with CRM systems",
+                            "Handles 50-60 cases per day",
+                            "Expert in product troubleshooting"
                         },
                         Goals = new List<string>
                         {
-                            "Quickly access account information",
-                            "Submit and track service requests",
-                            "Download invoices and reports",
-                            "Manage team access permissions"
+                            "Resolve customer issues quickly",
+                            "Access complete customer history",
+                            "Use knowledge base efficiently",
+                            "Meet SLA targets consistently"
                         },
                         PainPoints = new List<string>
                         {
-                            "Complex navigation in current system",
-                            "Limited mobile functionality",
-                            "Slow response times during peak hours",
-                            "Difficulty finding specific documents"
+                            "Switching between multiple systems",
+                            "Difficulty finding relevant knowledge articles",
+                            "Manual case routing delays",
+                            "Incomplete customer information"
                         },
-                        TechSkillLevel = "Advanced",
-                        PreferredChannels = new List<string> { "Mobile App", "Web Portal", "API Integration" },
-                        Behavior = new UserBehavior
-                        {
-                            UsageFrequency = "Daily",
-                            PeakUsageTime = "9AM-11AM, 2PM-4PM",
-                            DevicePreference = "Mobile-first, Desktop for complex tasks"
-                        }
+                        TechSkillLevel = "Intermediate",
+                        Dynamics365Access = new List<string> { "Customer Service Hub", "Knowledge Management" },
+                        PowerPlatformAccess = new List<string> { "Case Management App", "Agent Dashboard" },
+                        SecurityRoles = new List<string> { "Customer Service Representative", "Knowledge Manager" }
                     },
                     new UserPersona
                     {
-                        Name = "Mike Rodriguez",
-                        Role = "Individual Consumer",
-                        Department = "Personal Account Holder",
+                        Name = "Mike Chen",
+                        Role = "Customer",
+                        Department = "External Customer",
                         Background = new List<string>
                         {
-                            "Occasional technology user",
-                            "Prefers simple, intuitive interfaces",
-                            "Values quick problem resolution",
-                            "Limited time for complex processes"
+                            "Technology-savvy business user",
+                            "Prefers self-service options",
+                            "Uses mobile devices frequently",
+                            "Values quick problem resolution"
                         },
                         Goals = new List<string>
                         {
-                            "Pay bills and view statements",
-                            "Update personal information",
-                            "Report service issues",
-                            "Access help and support resources"
+                            "Find solutions without calling support",
+                            "Track case status in real-time",
+                            "Access account information easily",
+                            "Get quick responses to inquiries"
                         },
                         PainPoints = new List<string>
                         {
-                            "Too many steps to complete simple tasks",
-                            "Confusing technical terminology",
-                            "Difficulty accessing on mobile devices",
-                            "Long wait times for customer service"
+                            "Long wait times for support",
+                            "Repeating information to different agents",
+                            "Limited self-service options",
+                            "Difficulty finding relevant help content"
                         },
-                        TechSkillLevel = "Beginner",
-                        PreferredChannels = new List<string> { "Web Portal", "Phone Support", "Email" },
-                        Behavior = new UserBehavior
+                        TechSkillLevel = "Advanced",
+                        PowerPlatformAccess = new List<string> { "Customer Portal", "Self-Service App" },
+                        SecurityRoles = new List<string> { "Customer Portal User" }
+                    }
+                },
+                PowerPlatform = new PowerPlatformComponents
+                {
+                    PowerApps = new List<PowerApp>
+                    {
+                        new PowerApp
                         {
-                            UsageFrequency = "Weekly",
-                            PeakUsageTime = "Evenings and weekends",
-                            DevicePreference = "Desktop, some mobile"
+                            Name = "Customer Portal",
+                            Type = "Model-driven",
+                            Description = "Self-service portal for customers to create and track cases",
+                            DataSources = new List<string> { "Dataverse", "SharePoint" },
+                            TargetUsers = new List<string> { "External Customers" },
+                            KeyFeatures = new List<string> { "Case Creation", "Case Tracking", "Knowledge Search", "Account Information" },
+                            Environment = "Production",
+                            SecurityRoles = new List<string> { "Customer Portal User" }
+                        },
+                        new PowerApp
+                        {
+                            Name = "Agent Dashboard",
+                            Type = "Canvas",
+                            Description = "Quick access dashboard for customer service agents",
+                            DataSources = new List<string> { "Dataverse", "Power BI" },
+                            TargetUsers = new List<string> { "Customer Service Agents" },
+                            KeyFeatures = new List<string> { "Case Summary", "Performance Metrics", "Quick Actions", "Knowledge Search" },
+                            Environment = "Production",
+                            SecurityRoles = new List<string> { "Customer Service Representative" }
+                        }
+                    },
+                    PowerAutomate = new List<PowerAutomateFlow>
+                    {
+                        new PowerAutomateFlow
+                        {
+                            Name = "Case Auto-Assignment",
+                            Type = "Automated",
+                            Description = "Automatically assigns new cases to available agents based on skills and workload",
+                            Trigger = "When a new case is created",
+                            Actions = new List<string> { "Check agent availability", "Match skills to case type", "Assign case", "Send notification" },
+                            ConnectorsUsed = new List<string> { "Dataverse", "Office 365 Outlook", "Teams" },
+                            Environment = "Production",
+                            BusinessProcess = "Case Management"
+                        },
+                        new PowerAutomateFlow
+                        {
+                            Name = "SLA Escalation",
+                            Type = "Scheduled",
+                            Description = "Monitors case SLAs and escalates overdue cases",
+                            Trigger = "Daily schedule",
+                            Actions = new List<string> { "Check case SLA status", "Identify overdue cases", "Escalate to manager", "Update case priority" },
+                            ConnectorsUsed = new List<string> { "Dataverse", "Office 365 Outlook" },
+                            Environment = "Production",
+                            BusinessProcess = "Case Management"
+                        }
+                    },
+                    PowerBI = new List<PowerBIReport>
+                    {
+                        new PowerBIReport
+                        {
+                            Name = "Customer Service Dashboard",
+                            Type = "Dashboard",
+                            Description = "Real-time overview of customer service metrics and KPIs",
+                            DataSources = new List<string> { "Dataverse", "Office 365" },
+                            TargetAudience = new List<string> { "Customer Service Managers", "Executives" },
+                            RefreshFrequency = "Hourly",
+                            Workspace = "Customer Service Workspace"
+                        },
+                        new PowerBIReport
+                        {
+                            Name = "Agent Performance Report",
+                            Type = "Report",
+                            Description = "Individual and team performance metrics for customer service agents",
+                            DataSources = new List<string> { "Dataverse" },
+                            TargetAudience = new List<string> { "Customer Service Managers", "HR" },
+                            RefreshFrequency = "Daily",
+                            Workspace = "Customer Service Workspace"
+                        }
+                    },
+                    Connectors = new List<Connector>
+                    {
+                        new Connector
+                        {
+                            Name = "Dataverse",
+                            Type = "Standard",
+                            Description = "Primary data storage for customer service data",
+                            UsedBy = new List<string> { "Customer Portal", "Agent Dashboard", "Auto-Assignment Flow" },
+                            DataOperations = new List<string> { "Create", "Read", "Update", "Delete" }
+                        },
+                        new Connector
+                        {
+                            Name = "Office 365 Outlook",
+                            Type = "Standard",
+                            Description = "Email notifications and calendar integration",
+                            UsedBy = new List<string> { "SLA Escalation Flow", "Case Auto-Assignment" },
+                            DataOperations = new List<string> { "Create", "Read" }
                         }
                     }
                 },
-                Channels = new ChannelArchitecture
+                Dynamics365 = new Dynamics365Applications
                 {
-                    Digital = new List<DigitalChannel>
+                    EnabledApps = new List<D365App>
                     {
-                        new DigitalChannel
+                        new D365App
                         {
-                            Name = "Customer Web Portal",
-                            Type = "Web",
-                            Description = "Responsive web application for all customer self-service needs",
-                            Features = new List<string> { "Account management", "Billing", "Support tickets", "Document access" },
-                            Technologies = new List<string> { "React", "Node.js", "Progressive Web App" },
-                            UserBase = "All customer segments"
-                        },
-                        new DigitalChannel
-                        {
-                            Name = "Mobile Applications",
-                            Type = "Mobile",
-                            Description = "Native iOS and Android apps for on-the-go access",
-                            Features = new List<string> { "Quick account overview", "Push notifications", "Mobile payments", "Location services" },
-                            Technologies = new List<string> { "React Native", "Firebase", "Biometric authentication" },
-                            UserBase = "Mobile-first customers"
+                            Name = "Customer Service Hub",
+                            Type = "Customer Engagement",
+                            Description = "Core customer service application with case management capabilities",
+                            Modules = new List<string> { "Cases", "Knowledge Management", "Entitlements", "SLA Management" },
+                            Users = new List<string> { "Customer Service Agents", "Customer Service Managers" },
+                            BusinessProcesses = new List<string> { "Case Management", "Knowledge Management" },
+                            Environment = "Production"
                         }
                     },
-                    Traditional = new List<TraditionalChannel>
+                    Configuration = new D365Configuration
                     {
-                        new TraditionalChannel { Name = "Phone Support", Type = "Voice", Description = "24/7 customer service hotline", Integration = "CRM integration for context" },
-                        new TraditionalChannel { Name = "Email Support", Type = "Email", Description = "Automated and manual email responses", Integration = "Ticket system integration" }
+                        OrganizationName = "Contoso Customer Service",
+                        Region = "North America",
+                        Languages = new List<string> { "English", "Spanish", "French" },
+                        Currencies = new List<string> { "USD", "CAD" },
+                        TimeZone = "Eastern Standard Time"
                     },
-                    Integration = new ChannelIntegration
+                    CustomEntities = new List<D365CustomEntity>
                     {
-                        Strategy = "Omnichannel customer experience",
-                        SharedServices = new List<string> { "Single sign-on", "Unified customer profile", "Consistent branding" },
-                        DataSynchronization = new List<string> { "Real-time customer data sync", "Activity tracking across channels" }
-                    }
-                },
-                BusinessUnits = new List<BusinessUnit>
-                {
-                    new BusinessUnit
-                    {
-                        Name = "Customer Experience",
-                        Type = "Core",
-                        Description = "Manages all customer-facing interactions and experience design",
-                        KeyFunctions = new List<string> { "Customer journey mapping", "Experience optimization", "Feedback collection" },
-                        PrimaryUsers = new List<string> { "CX Managers", "UX Designers", "Customer Success Reps" },
-                        MainProcesses = new List<string> { "Customer onboarding", "Support case management", "Satisfaction surveys" }
-                    },
-                    new BusinessUnit
-                    {
-                        Name = "IT Operations",
-                        Type = "Supporting",
-                        Description = "Maintains and operates all technical infrastructure",
-                        KeyFunctions = new List<string> { "System monitoring", "Incident response", "Performance optimization" },
-                        PrimaryUsers = new List<string> { "System Administrators", "DevOps Engineers", "Security Analysts" },
-                        MainProcesses = new List<string> { "24/7 monitoring", "Deployment management", "Security patching" }
-                    }
-                },
-                Data = new DataArchitecture
-                {
-                    DataTypes = new List<DataType>
-                    {
-                        new DataType { Name = "Customer Data", Category = "Master", Description = "Core customer profile and account information", Volume = "45,000 records", UpdateFrequency = "Real-time" },
-                        new DataType { Name = "Transaction Data", Category = "Transactional", Description = "All customer transactions and interactions", Volume = "2M records/month", UpdateFrequency = "Real-time" }
-                    },
-                    DataStores = new List<DataStore>
-                    {
-                        new DataStore { Name = "Customer Database", Type = "Database", Technology = "PostgreSQL", Purpose = "Primary customer and account data" },
-                        new DataStore { Name = "Session Cache", Type = "Cache", Technology = "Redis", Purpose = "High-performance session management" }
-                    },
-                    Flow = new DataFlow
-                    {
-                        IngestionMethods = new List<string> { "Real-time API calls", "Nightly batch ETL", "Event streaming" },
-                        ProcessingSteps = new List<string> { "Data validation", "Business rule application", "Enrichment and transformation" },
-                        DistributionChannels = new List<string> { "REST APIs", "GraphQL endpoints", "Real-time dashboards" }
-                    },
-                    Governance = new DataGovernance
-                    {
-                        QualityMeasures = new List<string> { "Automated data validation", "Data lineage tracking", "Quality scorecards" },
-                        SecurityControls = new List<string> { "Role-based access control", "Data encryption at rest and transit", "Audit logging" },
-                        RetentionPolicies = new List<string> { "Customer data: 7 years", "Transaction logs: 3 years", "Analytics data: 5 years" },
-                        ComplianceRequirements = new List<string> { "GDPR compliance", "SOX financial controls", "PCI DSS for payment data" }
-                    }
-                },
-                Technology = new TechnologyStack
-                {
-                    Infrastructure = new Infrastructure
-                    {
-                        Cloud = new CloudPlatform
+                        new D365CustomEntity
                         {
-                            Provider = "AWS",
-                            Strategy = "Cloud-first with hybrid connectivity",
-                            Services = new List<string> { "EC2", "RDS", "S3", "CloudFront", "API Gateway", "Lambda" },
-                            Regions = new List<string> { "us-east-1 (primary)", "us-west-2 (DR)" }
+                            Name = "Product Registration",
+                            DisplayName = "Product Registration",
+                            Description = "Customer product registration information for warranty and support",
+                            Fields = new List<string> { "Product Model", "Serial Number", "Purchase Date", "Warranty Status" },
+                            Relationships = new List<string> { "Customer (N:1)", "Product (N:1)" },
+                            OwnershipType = "User or Team"
+                        }
+                    }
+                },
+                Dataverse = new DataverseConfiguration
+                {
+                    Entities = new List<DataverseEntity>
+                    {
+                        new DataverseEntity
+                        {
+                            Name = "Case",
+                            DisplayName = "Case",
+                            Type = "Standard",
+                            Description = "Customer service cases and inquiries",
+                            Fields = new List<string> { "Title", "Description", "Priority", "Status", "Customer", "Assigned Agent" },
+                            Views = new List<string> { "Active Cases", "My Cases", "High Priority Cases" },
+                            Forms = new List<string> { "Case Main Form", "Quick Create Form" }
                         },
-                        Compute = new List<ComputeResource>
+                        new DataverseEntity
                         {
-                            new ComputeResource { Type = "Container Orchestration", Technology = "Amazon EKS", Purpose = "Application hosting", Scaling = "Auto-scaling based on demand" },
-                            new ComputeResource { Type = "Serverless Functions", Technology = "AWS Lambda", Purpose = "Event processing", Scaling = "Event-driven scaling" }
+                            Name = "Knowledge Article",
+                            DisplayName = "Knowledge Article",
+                            Type = "Standard",
+                            Description = "Self-service knowledge base articles",
+                            Fields = new List<string> { "Title", "Content", "Keywords", "Category", "Status" },
+                            Views = new List<string> { "Published Articles", "Draft Articles" },
+                            Forms = new List<string> { "Article Main Form" }
                         }
                     },
-                    Application = new ApplicationTier
+                    SecurityRoles = new List<DataverseSecurityRole>
                     {
-                        Frontend = new List<TechnologyComponent>
+                        new DataverseSecurityRole
                         {
-                            new TechnologyComponent { Name = "React", Version = "18.x", Purpose = "Web UI framework", Justification = "Component-based, excellent ecosystem" },
-                            new TechnologyComponent { Name = "React Native", Version = "0.72.x", Purpose = "Mobile app development", Justification = "Code reuse across platforms" }
+                            Name = "Customer Service Representative",
+                            Description = "Full access to customer service functions",
+                            Privileges = new List<string> { "Read/Write Cases", "Read Knowledge Articles", "Create Activities" },
+                            BusinessUnit = "Customer Service"
                         },
-                        Backend = new List<TechnologyComponent>
+                        new DataverseSecurityRole
                         {
-                            new TechnologyComponent { Name = "Node.js", Version = "18 LTS", Purpose = "API and business logic", Justification = "JavaScript consistency, excellent performance" },
-                            new TechnologyComponent { Name = "Express.js", Version = "4.x", Purpose = "Web framework", Justification = "Lightweight, flexible, well-documented" }
-                        },
-                        Database = new List<TechnologyComponent>
-                        {
-                            new TechnologyComponent { Name = "PostgreSQL", Version = "15.x", Purpose = "Primary database", Justification = "ACID compliance, JSON support, mature" },
-                            new TechnologyComponent { Name = "Redis", Version = "7.x", Purpose = "Caching and sessions", Justification = "High performance, data structure support" }
+                            Name = "Customer Portal User",
+                            Description = "Limited access for external customers",
+                            Privileges = new List<string> { "Read Own Cases", "Create Cases", "Read Knowledge Articles" },
+                            BusinessUnit = "Customer Service"
                         }
                     },
-                    Security = new SecurityFramework
+                    BusinessUnits = new List<DataverseBusinessUnit>
                     {
-                        IdentityManagement = new List<string> { "OAuth 2.0 / OpenID Connect", "Multi-factor authentication", "Single sign-on (SSO)" },
-                        NetworkSecurity = new List<string> { "WAF (Web Application Firewall)", "DDoS protection", "VPC with private subnets" },
-                        ApplicationSecurity = new List<string> { "Code security scanning", "Dependency vulnerability scanning", "Secure coding practices" },
-                        DataProtection = new List<string> { "Encryption at rest (AES-256)", "Encryption in transit (TLS 1.3)", "Key management service" }
+                        new DataverseBusinessUnit
+                        {
+                            Name = "Customer Service",
+                            Description = "Primary business unit for customer service operations",
+                            Users = new List<string> { "Customer Service Agents", "Customer Service Managers" },
+                            SecurityRoles = new List<string> { "Customer Service Representative", "Customer Service Manager" }
+                        }
+                    }
+                },
+                Integrations = new IntegrationArchitecture
+                {
+                    SystemIntegrations = new List<SystemIntegration>
+                    {
+                        new SystemIntegration
+                        {
+                            Name = "ERP Integration",
+                            SourceSystem = "Dynamics 365 Customer Service",
+                            TargetSystem = "SAP ERP",
+                            IntegrationType = "Real-time",
+                            Method = "REST API",
+                            DataEntities = new List<string> { "Customer", "Product", "Orders" },
+                            Direction = "Bidirectional"
+                        }
                     },
-                    Operations = new MonitoringOperations
+                    APIEndpoints = new List<APIEndpoint>
                     {
-                        ApplicationMonitoring = new List<string> { "Application performance monitoring (APM)", "Real user monitoring (RUM)", "Synthetic monitoring" },
-                        InfrastructureMonitoring = new List<string> { "Server and container monitoring", "Database performance monitoring", "Network monitoring" },
-                        LogManagement = new List<string> { "Centralized logging", "Log analysis and search", "Security event correlation" },
-                        AlertingStrategy = new List<string> { "Tiered alerting (P1-P4)", "Intelligent alert grouping", "Escalation procedures" }
+                        new APIEndpoint
+                        {
+                            Name = "Case Management API",
+                            URL = "https://api.contoso.com/cases",
+                            Method = "GET",
+                            Description = "Retrieve customer cases",
+                            Authentication = "OAuth 2.0",
+                            UsedBy = new List<string> { "Customer Portal", "Mobile App" }
+                        }
+                    }
+                },
+                Security = new SecurityModel
+                {
+                    SecurityRoles = new List<SecurityRole>
+                    {
+                        new SecurityRole
+                        {
+                            Name = "Customer Service Agent",
+                            Description = "Standard agent permissions",
+                            Privileges = new List<string> { "Read/Write Cases", "Read Knowledge Base", "Create Activities" },
+                            BusinessUnit = "Customer Service",
+                            AppliesTo = new List<string> { "Cases", "Knowledge Articles", "Activities" }
+                        }
+                    },
+                    Settings = new SecuritySettings
+                    {
+                        MultiFactorAuthRequired = true,
+                        AuditingEnabled = true,
+                        SessionTimeout = 480,
+                        PasswordPolicy = "Strong"
+                    }
+                },
+                Environments = new EnvironmentStrategy
+                {
+                    Environments = new List<PowerPlatformEnvironment>
+                    {
+                        new PowerPlatformEnvironment
+                        {
+                            Name = "Development",
+                            Type = "Development",
+                            Description = "Development environment for solution building",
+                            Region = "North America",
+                            DataverseEnabled = true,
+                            Applications = new List<string> { "Customer Portal (Dev)", "Agent Dashboard (Dev)" }
+                        },
+                        new PowerPlatformEnvironment
+                        {
+                            Name = "Production",
+                            Type = "Production",
+                            Description = "Live production environment",
+                            Region = "North America",
+                            DataverseEnabled = true,
+                            Applications = new List<string> { "Customer Portal", "Agent Dashboard" }
+                        }
+                    },
+                    ALM = new ALMStrategy
+                    {
+                        Strategy = "DevOps",
+                        SourceControl = new List<string> { "Azure DevOps", "Git" },
+                        DeploymentPipelines = new List<string> { "Build Pipeline", "Release Pipeline", "Solution Checker" },
+                        Tools = new List<string> { "Power Platform CLI", "Azure Pipelines" }
                     }
                 },
                 Implementation = new ImplementationPlan
@@ -286,33 +432,42 @@ namespace VisioArchitectureGenerator.Services
                     {
                         new ImplementationPhase
                         {
-                            Name = "Foundation & Core Services",
-                            Description = "Basic infrastructure, authentication, and core APIs",
+                            Name = "Foundation Setup",
+                            Description = "Environment setup and core Dynamics 365 configuration",
                             StartDate = DateTime.Now.AddMonths(1),
-                            EndDate = DateTime.Now.AddMonths(4),
-                            Deliverables = new List<string> { "Cloud infrastructure", "User authentication", "Core customer APIs", "Basic web portal" },
-                            Status = "Planning"
+                            EndDate = DateTime.Now.AddMonths(2),
+                            Deliverables = new List<string> { "Environment Setup", "Security Configuration", "Base D365 Setup" },
+                            Status = "Planned",
+                            D365Components = new List<string> { "Customer Service Hub", "Case Management" },
+                            PowerPlatformComponents = new List<string> { "Development Environment" }
                         },
                         new ImplementationPhase
                         {
-                            Name = "Enhanced Portal & Mobile",
-                            Description = "Full-featured web portal and mobile applications",
-                            StartDate = DateTime.Now.AddMonths(4),
-                            EndDate = DateTime.Now.AddMonths(7),
-                            Deliverables = new List<string> { "Complete web portal", "iOS/Android apps", "Advanced self-service features" },
-                            Status = "Planned"
+                            Name = "Core Applications",
+                            Description = "Build core Power Apps and automation flows",
+                            StartDate = DateTime.Now.AddMonths(2),
+                            EndDate = DateTime.Now.AddMonths(4),
+                            Deliverables = new List<string> { "Customer Portal", "Agent Dashboard", "Core Flows" },
+                            Status = "Planned",
+                            PowerPlatformComponents = new List<string> { "Customer Portal", "Agent Dashboard", "Auto-Assignment Flow" }
                         }
-                    },
-                    Governance = new GovernanceStructure
-                    {
-                        DecisionMaking = new List<string> { "Architecture Review Board", "Technical Steering Committee", "Product Owner approval" },
-                        ReviewCycles = new List<string> { "Weekly sprint reviews", "Monthly architecture reviews", "Quarterly strategy alignment" },
-                        QualityGates = new List<string> { "Code review requirements", "Automated testing thresholds", "Security vulnerability limits" }
                     },
                     Risks = new List<Risk>
                     {
-                        new Risk { Description = "Legacy system integration complexity", Impact = "High", Probability = "Medium", Mitigation = "Phased integration approach with fallback plans" },
-                        new Risk { Description = "High user adoption resistance", Impact = "Medium", Probability = "Low", Mitigation = "Comprehensive training program and change management" }
+                        new Risk
+                        {
+                            Description = "User adoption resistance to new system",
+                            Impact = "Medium",
+                            Probability = "Medium",
+                            Category = "Business",
+                            Mitigation = "Comprehensive training program and change management"
+                        }
+                    },
+                    ChangeManagement = new ChangeManagement
+                    {
+                        StakeholderGroups = new List<string> { "Customer Service Agents", "Managers", "IT Team" },
+                        TrainingPrograms = new List<string> { "Power Platform Basics", "D365 Customer Service", "New Process Training" },
+                        AdoptionMetrics = new List<string> { "User Login Frequency", "Case Resolution Time", "Customer Satisfaction" }
                     }
                 }
             };
