@@ -533,25 +533,33 @@ namespace VisioArchitectureGenerator.Generators
             svgContent.AppendLine($@"<text x=""{x + nameWidth + 10}"" y=""{y + height/2 + 5}"" class=""content-title"">{technologies}</text>");
         }
 
-        private void CreateTextSection(int x, int y, int width, int height, string title, string content)
-        {
-            svgContent.AppendLine($@"<text x=""{x}"" y=""{y + 15}"" class=""small-text"" font-weight=""bold"">{title}:</text>");
-            
-            // Split content into lines and display
-            var lines = WrapText(content, 40); // Approximate character limit per line
-            for (int i = 0; i < Math.Min(lines.Count, 3); i++)
-            {
-                svgContent.AppendLine($@"<text x=""{x}"" y=""{y + 30 + i * 12}"" class=""small-text"">{lines[i]}</text>");
-            }
-        }
-
         private void CreateTextBlock(int x, int y, int width, int height, string text)
         {
             var lines = WrapText(text, width / 8); // Approximate character limit based on width
             for (int i = 0; i < Math.Min(lines.Count, height / 14); i++)
             {
-                svgContent.AppendLine($@"<text x=""{x}"" y=""{y + 15 + i * 14}"" class=""content-text"">{lines[i]}</text>");
+                svgContent.AppendLine($"<text x=\"{x}\" y=\"{y + 15 + i * 14}\" class=\"content-text\">{EscapeXml(lines[i])}</text>");
             }
+        }
+
+        private void CreateTextSection(int x, int y, int width, int height, string title, string content)
+        {
+            svgContent.AppendLine($"<text x=\"{x}\" y=\"{y + 15}\" class=\"small-text\" font-weight=\"bold\">{EscapeXml(title)}:</text>");
+            var lines = WrapText(content, 40); // Approximate character limit per line
+            for (int i = 0; i < Math.Min(lines.Count, 3); i++)
+            {
+                svgContent.AppendLine($"<text x=\"{x}\" y=\"{y + 30 + i * 12}\" class=\"small-text\">{EscapeXml(lines[i])}</text>");
+            }
+        }
+
+        private string EscapeXml(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return string.Empty;
+            return input.Replace("&", "&amp;")
+                        .Replace("<", "&lt;")
+                        .Replace(">", "&gt;")
+                        .Replace("\"", "&quot;")
+                        .Replace("'", "&apos;");
         }
 
         private void CreateFooter(int yOffset)
